@@ -1,0 +1,32 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    06:20:46 04/16/2021 
+// Design Name: 
+// Module Name:    clkhalfadder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module clkhalfadder(
+clk,A,B,SUM,CARRY
+    );
+input clk,A,B;
+output reg SUM,CARRY;
+always @(posedge clk)
+begin
+SUM<=A^B; //non blocking assignment(<=)
+CARRY<=A&B;
+end
+
+endmodule
